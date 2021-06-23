@@ -104,6 +104,11 @@ message(STATUS "Building GTSAM - shared: ${BUILD_SHARED_LIBS}")
 # BUILD_SHARED_LIBS automatically defines static/shared libs:
 add_library(gtsam ${gtsam_srcs})
 
+message(STATUS "GTSAM_BOOST_LIBRARIES: ${GTSAM_BOOST_LIBRARIES}")
+message(STATUS "Boost_INCLUDE_DIR: ${Boost_INCLUDE_DIR}")
+message(STATUS "GTSAM_ADDITIONAL_LIBRARIES: ${GTSAM_ADDITIONAL_LIBRARIES}")
+
+
 # Boost:
 target_link_libraries(gtsam PUBLIC ${GTSAM_BOOST_LIBRARIES})
 target_include_directories(gtsam PUBLIC ${Boost_INCLUDE_DIR})
